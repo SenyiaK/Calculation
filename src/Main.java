@@ -22,6 +22,13 @@ public class Main {
     JButton buttonMinus  = new JButton("-");
     JButton buttonDivide  = new JButton("/");
     JButton buttonMultiply  = new JButton("*");
+    JButton buttonDell  = new JButton("%");
+    JButton buttonSin  = new JButton("sin");
+    JButton buttonCos  = new JButton("cos");
+    JButton buttonPi  = new JButton("pi");
+    JButton buttonsinminusone  = new JButton("arcsin");
+    JButton buttonlog  = new JButton("log");
+    JButton buttonacos  = new JButton("acos");
 
     JPanel window = new JPanel();
     JTextField displayField = new JTextField(30);
@@ -30,10 +37,11 @@ public class Main {
 
         BorderLayout a1 = new BorderLayout();
         window.setLayout(a1);
+        displayField =new JTextField(30);
         window.add("North", displayField);
 
         JPanel p1 = new JPanel();
-        GridLayout gl = new GridLayout(4:3);
+        GridLayout gl = new GridLayout(4,3);
 
         p1.setLayout(gl);
 
@@ -53,12 +61,19 @@ public class Main {
         window.add ("Center",p1);
 
         JPanel p2 = new JPanel();
-        GridLayout gl2 = new GridLayout(4:1);
+        GridLayout gl2 = new GridLayout(5,2);
         p2.setLayout(gl2);
         p2.add (buttonPlus);
         p2.add (buttonMinus);
         p2.add (buttonDivide);
         p2.add(buttonMultiply);
+        p2.add(buttonDell);
+        p2.add(buttonSin);
+        p2.add(buttonCos);
+        p2.add(buttonPi);
+        p2.add(buttonsinminusone);
+        p2.add(buttonlog);
+        p2.add(buttonacos);
 
         window.add("East",p2);
 
@@ -88,6 +103,13 @@ public class Main {
         buttonEq.addActionListener(calculatorEngine);
         buttonMultiply.addActionListener(calculatorEngine);
         buttonPlus.addActionListener(calculatorEngine);
+        buttonDell.addActionListener(calculatorEngine);
+        buttonSin.addActionListener(calculatorEngine);
+        buttonCos.addActionListener(calculatorEngine);
+        buttonPi.addActionListener(calculatorEngine);
+        buttonsinminusone.addActionListener(calculatorEngine);
+        buttonlog.addActionListener(calculatorEngine);
+        buttonacos.addActionListener(calculatorEngine);
 
     }
 
